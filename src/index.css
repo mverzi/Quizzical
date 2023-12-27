@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  
+}
+
+body{
+  font-family: 'Karla', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #F5F7FB;
+}
+
+main {
+  text-align: center;
+  color: #293264;
+}
+
+.button{
+  font-family: 'Karla', sans-serif;
+  font-size: 1.1rem;
+  height: 50px;
+  width: 175px;
+  border-radius: 12px;
+  border: none;
+  background-color: #4D5B9E;
+  color: #F5F7FB;
+  margin-top: 25px;
+}
+
+.answer-button{
+  font-family: 'Karla', sans-serif;
+  font-size: 0.9rem;
+  min-height: 40px;
+  border-radius: 12px;
+  border: 1px solid #4D5B9E;
+  background-color: #F5F7FB;
+  margin-right: 15px;
+}
+
+.results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.results h4 {
+  margin-right: 10px; 
+}
+
+.button {
+  margin-top: 0; /* Reset top margin for the button */
+}
