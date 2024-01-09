@@ -23,9 +23,13 @@ function Question(props){
     })
 
     return (
-        <div className='questions-container'>
-            <h3 className='question'>{props.question}</h3>
-            {buttonElements}
+        <div className='quiz-container'>
+            <div className='question-container'> 
+                <h3 className='question'>{props.question}</h3>
+            </div>
+            <div className='answer-container'>
+                {buttonElements}
+            </div>
         </div>
     )
 }
