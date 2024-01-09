@@ -54,5 +54,24 @@ main {
 }
 
 .button {
-  margin-top: 0; /* Reset top margin for the button */
+  margin-top: 0; 
+}
+
+@media screen and (max-width: 600px) {
+  .button {
+    width: 100%; 
+  }
+
+  .answer-button {
+    width: calc(50% - 10px);  
+    margin-right: 1;
+  }
+
+  .results h4 {
+    margin-bottom: 10px;
+  }
+
+  .question {
+    font-size: 3vw; 
+  }
 }

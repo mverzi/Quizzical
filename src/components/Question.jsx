@@ -24,7 +24,7 @@ function Question(props){
 
     return (
         <div>
-            <h3>{props.question}</h3>
+            <h3 className='question'>{props.question}</h3>
             {buttonElements}
         </div>
     )
