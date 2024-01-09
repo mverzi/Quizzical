@@ -57,6 +57,7 @@ main {
   margin-top: 0; 
 }
 
+
 @media screen and (max-width: 600px) {
   .button {
     width: 100%; 
@@ -64,7 +65,8 @@ main {
 
   .answer-button {
     width: calc(50% - 10px);  
-    margin-right: 1;
+    margin-right: 0;
+    font-size: 2.5vw;
   }
 
   .results h4 {
@@ -72,6 +74,6 @@ main {
   }
 
   .question {
-    font-size: 3vw; 
+    font-size: 2.5vw; 
   }
 }

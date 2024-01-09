@@ -23,7 +23,7 @@ function Question(props){
     })
 
     return (
-        <div>
+        <div className='questions-container'>
             <h3 className='question'>{props.question}</h3>
             {buttonElements}
         </div>
