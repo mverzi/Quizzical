@@ -17,6 +17,7 @@ function App() {
   const [questionAmount, setQuestionAmount] = useState(5)
   const [correctAnswers, setCorrectAnswers] = useState(0)
   const [checked, setChecked] = useState(false)
+  const [incomplete, setIncomplete] = useState(null)
 
   const shuffleArray = (arr) => arr.sort(() => Math.random() - 0.5);
 
@@ -83,14 +84,19 @@ function App() {
   }
 
   function checkAnswers(){
-    setChecked(true)
+    if (questions.every((q) => q.selected !== null)) {
+      setChecked(true)
+      setIncomplete(false)
 
-    setQuestions(questions => questions.map(q => {
-      return {
-        ...q,
-        checked: true
-      }
-    }))
+      setQuestions(questions => questions.map(q => {
+        return {
+          ...q,
+          checked: true
+        }
+      }))
+    } else {
+      setIncomplete(true)
+    }
 
     let correctAnswers = 0
     for(let i = 0; i < questions.length; i++){
@@ -113,6 +119,7 @@ function App() {
           />
   })
 
+
   const styles = (count) => ({
     backgroundColor: questionCount.find(option => option.count === count)?.selected ? "#D6DBF5" : "transparent"
   });
@@ -125,6 +132,7 @@ function App() {
             {questionElements}
           </div>
           <div className="results">
+            {incomplete && <h4>Please answer all questions before submitting.</h4>}
             {checked && <h4>You scored {correctAnswers}/{questionAmount} answers correct</h4>}
             {!checked ? 
               <button className="button" onClick={checkAnswers}>Check Answers</button> :

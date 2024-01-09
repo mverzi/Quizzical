@@ -43,6 +43,13 @@ main {
   margin-top: 25px;
 }
 
+.button:hover {
+  background-color: #94D7A2;
+  color: #4D5B9E;
+  border: 1px solid #4D5B9E;
+  cursor: pointer;
+}
+
 .answer-button{
   font-family: 'Karla', sans-serif;
   font-size: 0.9rem;
@@ -52,6 +59,11 @@ main {
   background-color: #F5F7FB;
   margin-right: 15px;
   margin-bottom: 10px;
+}
+
+.answer-button:hover{
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .results {
